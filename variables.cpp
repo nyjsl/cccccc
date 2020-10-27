@@ -6,6 +6,8 @@ void testVariables();
 void testIntegers();
 void testArray();
 void testString();
+void test_enum();
+using namespace std;
 
 
 void testVariable(){
@@ -78,7 +80,6 @@ void testIntegers(){
 
 void testArray(){
     //不能将数组赋值给另一个数组
-    using namespace std;
     int yarms[10];
     yarms[0] = 1;
     yarms[1] = 2;
@@ -125,9 +126,40 @@ void testString(){
     
 }
 
+void test_enum(){
+    enum spec {red,orange,yellow,green,oil,blue,purple};
+
+    spec colors = red;
+
+    cout << colors << endl;
+}
+
 struct out_truct
 {
     /* data */
     int age;
     std::string name;
 };
+
+struct struct_union
+{
+    int type;
+    std::string name;
+    //共用体能存储不同的数据类型,但同时只能存储一种
+    union id{
+        double u_name;
+        int uage;
+    } union_id;
+};
+//匿名共用体
+struct anonymous_union
+{
+    /* data */
+    int type;
+    union{
+        long uid;
+        double id;
+    };
+};
+
+

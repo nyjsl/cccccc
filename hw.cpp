@@ -42,7 +42,23 @@ int main(){
 
     cout << ot.name << endl;
 
+
+    struct_union stt = {
+        1,
+        "Hank"
+    };
+
+    if(stt.type == 1){
+        stt.union_id.u_name = 2.2;
+    };
+    cout << stt.union_id.u_name << endl;
+
+    test_enum();
+
     return 0;
+
+
+
 }
 
 
