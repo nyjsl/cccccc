@@ -2,6 +2,7 @@
 #include <cmath>
 #include "variables.cpp"
 #include "pointer.cpp"
+#include "func.cpp"
 using namespace std; // 函数头使用using编译指令
 
 void simon(int); //function prototype for simon()
@@ -60,7 +61,24 @@ int main(){
     // test_pointer_and_str();
     // test_pointer_and_struct();
     // test_new_delete(); 
-    test_comp();
+    // test_comp();
+
+    // string hello = "hello";
+    // string world = "world";
+    // string helo = "hello";
+    // // string 的运算符重载
+    // cout << (hello != world) << endl;
+    // cout << (hello == helo) << endl;
+
+    // const int arr_length = 5;
+    // int arr[5] = {1,2,3,4,5};
+    // auto result = sum_arr(arr,arr_length);
+    // cout << result << endl;
+    // int res = sum_arr(arr,arr+3);
+    // cout << res << endl;
+
+    test_cosnt_p();
+
     return 0;
 
 

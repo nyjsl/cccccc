@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
-
+// 原型描述了函数到编译器的接口
+// 函数原型不要求提供变量名,有类型列表就足够了
+// 原型可以确保以下几点
+// 编译期正确处理函数返回值,编译期检查使用的参数数目是否正确,编译期检查使用的参数类型是否正确
 #include <cstring>
 void test_memory_location();
 void test_new();
@@ -9,6 +12,11 @@ void test_pointer_and_struct();
 char* get_name();
 
 void test_comp();
+
+void test_vector();
+void test_array();
+
+void test_cosnt_p();
 
 // 指针用于存储值的地址,因此,指针名表示的是地址
 // * 运算符被称为间接值或解除引用运算符
@@ -198,5 +206,25 @@ void test_comp(){
     cout << (*ppa)->year << endl;
     cout << (*(ppb+1))->year<< endl;
 
-    
 }
+
+// 指针和const
+void test_cosnt_p(){
+    int age = 39;
+    const int*  pt = &age; // pt 指向一个const int ,不能使用pt来修改age
+    // pt 指向age 但是age不是常量,age可以修改
+    cout << *pt << endl;
+    age = 33;
+    cout << *pt << endl;
+}
+
+#include <vector>
+ void test_vector(){
+     vector<double> vd(5);
+     vd[0] = 1;
+     vd[2] = 2;
+ }
+#include <array>
+ void test_arary(){
+     array<int,5> ai;
+ }
