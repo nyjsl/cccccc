@@ -3,9 +3,14 @@
 #include "variables.cpp"
 #include "pointer.cpp"
 #include "func.cpp"
+#include "stringfun.cpp"
+#include "strucfun.cpp"
+#include "funpointer.cpp"
 using namespace std; // 函数头使用using编译指令
 
 void simon(int); //function prototype for simon()
+
+double time_test(int);
 
 int main(){
 
@@ -77,12 +82,40 @@ int main(){
     // int res = sum_arr(arr,arr+3);
     // cout << res << endl;
 
-    test_cosnt_p();
+    // test_cosnt_p();
+    // char 字符串的字面值不允许修改 所有要加上const
+    // char const* src = "abcdbcdd";
+    // unsigned int count = c_in_str(src,'b');
+    // cout << count << endl;
+    // char * result;
+    // result = build_str('q',4);
+    // cout << result << endl;
+    // delete [] result;
+
+    // rect rplace = {
+    //     3.00,
+    //     4.00
+    // };
+    // polar pplace = rect_to_polar(rplace);
+    // show_polar(pplace);
+
+    // rect re = {
+    //     4.00,
+    //     3.00
+    // };
+    // polar p;
+    // rect_to_polar(&re,&p);
+    // show_polar(&p);
+
+    estimate(4,time_test);
 
     return 0;
 
 
 
+}
+double time_test(int lines){
+    return lines* 0.5;
 }
 
 
