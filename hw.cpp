@@ -6,6 +6,7 @@
 #include "stringfun.cpp"
 #include "strucfun.cpp"
 #include "funpointer.cpp"
+#include "funtemp.cpp"
 using namespace std; // 函数头使用using编译指令
 
 void simon(int); //function prototype for simon()
@@ -131,16 +132,24 @@ int main(){
     // swapp(&a,&b);
     // cout << a << " " << b << endl;
 
-    free_throws one = {"I'm back",13,14};
-    free_throws two = {"now fine", 10 ,16};
+    // free_throws one = {"I'm back",13,14};
+    // free_throws two = {"now fine", 10 ,16};
 
-    set_pc(one);
-    display(one);
-    display(two);
-    free_throws three = acumulate(two,one);
-    display(two);
-    display(three);
+    // set_pc(one);
+    // display(one);
+    // display(two);
+    // free_throws three = acumulate(two,one);
+    // display(two);
+    // display(three);
 
+    int a = 3;
+    int b = 4;
+    string ss = "2";
+    string sss = "3";
+    swapp(a,b);
+    swapp(ss,sss);
+    cout << a << endl <<b <<endl;
+    cout << ss << endl << sss <<endl;
     return 0;
 
 
