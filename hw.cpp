@@ -11,6 +11,20 @@ using namespace std; // 函数头使用using编译指令
 void simon(int); //function prototype for simon()
 
 double time_test(int);
+struct free_throws
+{
+    /* data */
+    std::string name;
+    int made;
+    int attemps;
+    float percent;
+};
+
+void display(const free_throws & ft);
+
+void set_pc(free_throws & ft);
+
+free_throws & acumulate(free_throws & traget,const free_throws & source);
 
 int main(){
 
@@ -107,7 +121,25 @@ int main(){
     // rect_to_polar(&re,&p);
     // show_polar(&p);
 
-    estimate(4,time_test);
+    // estimate(4,time_test);
+    // first_ref();
+
+    // int a = 2;
+    // int b = 3;
+    // swapr(a,b);
+    // cout << a << " " << b << endl;
+    // swapp(&a,&b);
+    // cout << a << " " << b << endl;
+
+    free_throws one = {"I'm back",13,14};
+    free_throws two = {"now fine", 10 ,16};
+
+    set_pc(one);
+    display(one);
+    display(two);
+    free_throws three = acumulate(two,one);
+    display(two);
+    display(three);
 
     return 0;
 
@@ -123,3 +155,29 @@ void simon(int n){
     // using namespace std;
     cout << "i m simon" << endl;    
 }
+
+
+
+
+void display(const free_throws & ft){
+    cout << "Name: " << ft.name <<endl;
+    cout << "Made: " << ft.made << endl;
+    cout << "attemps: " << ft.attemps << endl;
+    cout << "percent: " << ft.percent << endl;
+}
+
+void set_pc(free_throws & ft){
+    if(ft.attemps!=0){
+        ft.percent = 100.0f * float(ft.made) /float(ft.attemps);
+    }else{
+        ft.percent = 0;
+    }
+}
+
+free_throws & acumulate(free_throws & traget,const free_throws & source){
+    traget.attemps+= source.attemps;
+    traget.made += source.made;
+    set_pc(traget);
+    return traget;
+}
+
