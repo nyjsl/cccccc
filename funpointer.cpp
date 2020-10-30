@@ -26,3 +26,13 @@ void estimate(int lines,pf f){
     cout << lines << " lines will take ";
     cout << f(lines) << " hour(s)" << endl;
 }
+
+
+//头文件中包含的内容
+// 函数原型
+// 使用 #define 或const 定义的符号常量
+// 结构声明
+// 类声明
+// 模板声明
+// 内联函数
+//在包含自己的头文件的时候,应该用双引号,而不是尖括号

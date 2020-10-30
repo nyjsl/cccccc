@@ -4,9 +4,10 @@
 #include "pointer.cpp"
 #include "func.cpp"
 #include "stringfun.cpp"
-#include "strucfun.cpp"
+// #include "strucfun.cpp"
 #include "funpointer.cpp"
 #include "funtemp.cpp"
+#include "cordial.h"
 using namespace std; // 函数头使用using编译指令
 
 void simon(int); //function prototype for simon()
@@ -142,16 +143,21 @@ int main(){
     // display(two);
     // display(three);
 
-    int a = 3;
-    int b = 4;
-    string ss = "2";
-    string sss = "3";
-    swapp(a,b);
-    swapp(ss,sss);
-    cout << a << endl <<b <<endl;
-    cout << ss << endl << sss <<endl;
+    // int a = 3;
+    // int b = 4;
+    // string ss = "2";
+    // string sss = "3";
+    // swapp(a,b);
+    // swapp(ss,sss);
+    // cout << a << endl <<b <<endl;
+    // cout << ss << endl << sss <<endl;
 
-
+    rect rplace = {
+        3.00,
+        4.00
+    };
+    polar pplace = rect_2_polar(rplace);
+    show_polar(pplace);
     
     return 0;
 
